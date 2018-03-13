@@ -14,6 +14,8 @@
 		E213B1C42053236100B1B7D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E213B1C32053236100B1B7D7 /* Assets.xcassets */; };
 		E213B1C72053236100B1B7D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E213B1C52053236100B1B7D7 /* LaunchScreen.storyboard */; };
 		E213B2112057121700B1B7D7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E213B2102057121700B1B7D7 /* GoogleService-Info.plist */; };
+		E269D0142057736300B7FA83 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E269D0132057736300B7FA83 /* SearchViewController.swift */; };
+		E269D0162057B17900B7FA83 /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E269D0152057B17900B7FA83 /* VideoTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		E213B1C62053236100B1B7D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E213B1C82053236100B1B7D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E213B2102057121700B1B7D7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		E269D0132057736300B7FA83 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		E269D0152057B17900B7FA83 /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +87,9 @@
 				E213B2102057121700B1B7D7 /* GoogleService-Info.plist */,
 				E213B1BC2053236100B1B7D7 /* AppDelegate.swift */,
 				E213B1BE2053236100B1B7D7 /* ViewController.swift */,
+				E269D0132057736300B7FA83 /* SearchViewController.swift */,
 				E213B1C02053236100B1B7D7 /* Main.storyboard */,
+				E269D0152057B17900B7FA83 /* VideoTableViewCell.swift */,
 				E213B1C32053236100B1B7D7 /* Assets.xcassets */,
 				E213B1C52053236100B1B7D7 /* LaunchScreen.storyboard */,
 				E213B1C82053236100B1B7D7 /* Info.plist */,
@@ -170,6 +176,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-swift-short-youtube/Pods-swift-short-youtube-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
@@ -177,6 +184,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
@@ -230,6 +238,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E269D0142057736300B7FA83 /* SearchViewController.swift in Sources */,
+				E269D0162057B17900B7FA83 /* VideoTableViewCell.swift in Sources */,
 				E213B1BF2053236100B1B7D7 /* ViewController.swift in Sources */,
 				E213B1BD2053236100B1B7D7 /* AppDelegate.swift in Sources */,
 			);

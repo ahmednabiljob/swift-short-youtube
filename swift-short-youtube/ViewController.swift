@@ -61,7 +61,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate,GIDSignInDelegate {
                 self.signInButton.isHidden = true
             }
         }
-        
+        performSegue(withIdentifier: "SearchViewController", sender: self)
     }
     
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
