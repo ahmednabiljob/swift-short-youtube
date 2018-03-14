@@ -33,8 +33,8 @@ class VideoHelper{
     }
     
     func fetchVideos(_ completionHandler: @escaping ([Video]) -> Void){
-        
-        let requestedURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=\(self.keyword)&type=\(self.videoType)&key=\("AIzaSyAxmwhMwfSYoOtTXNsuSRHJ0ec9bb-d8PE")"
+        let encodedKeyWord = self.keyword.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)!
+        let requestedURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=\(encodedKeyWord)&type=\(self.videoType)&key=\("AIzaSyAxmwhMwfSYoOtTXNsuSRHJ0ec9bb-d8PE")"
         let _ = Alamofire.request(URL(string: requestedURL)!).responseJSON { response in
             //print("Request: \(String(describing: response.request))")   // original url request
             //print("Response: \(String(describing: response.response))") // http url response

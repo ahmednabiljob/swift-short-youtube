@@ -64,10 +64,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="174.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IMW-ir-O2Q">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IMW-ir-O2Q">
                                                     <rect key="frame" x="15" y="143" width="345" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="textColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nWs-lD-E6B">
@@ -94,13 +94,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="HOw-h1-Ehh" firstAttribute="top" secondItem="0UW-gE-11e" secondAttribute="top" id="AFN-E1-NXl"/>
                             <constraint firstItem="HOw-h1-Ehh" firstAttribute="leading" secondItem="YZA-he-o5F" secondAttribute="leading" id="DyJ-rr-q6Q"/>
                             <constraint firstItem="Zyk-gG-r2t" firstAttribute="trailing" secondItem="YZA-he-o5F" secondAttribute="trailing" id="GKx-rq-Bmw"/>
-                            <constraint firstItem="HOw-h1-Ehh" firstAttribute="top" secondItem="0UW-gE-11e" secondAttribute="top" id="J9u-tx-CbU"/>
+                            <constraint firstItem="HOw-h1-Ehh" firstAttribute="leading" secondItem="YZA-he-o5F" secondAttribute="leading" id="OsF-26-Qdo"/>
+                            <constraint firstItem="HOw-h1-Ehh" firstAttribute="leading" secondItem="YZA-he-o5F" secondAttribute="leading" id="QBb-mW-U7l"/>
                             <constraint firstItem="Zyk-gG-r2t" firstAttribute="bottom" secondItem="YZA-he-o5F" secondAttribute="bottom" id="Wui-w0-7sn"/>
                             <constraint firstItem="Zyk-gG-r2t" firstAttribute="top" secondItem="HOw-h1-Ehh" secondAttribute="bottom" id="aEk-re-h45"/>
                             <constraint firstItem="Zyk-gG-r2t" firstAttribute="leading" secondItem="YZA-he-o5F" secondAttribute="leading" id="bgy-hp-m2q"/>
+                            <constraint firstItem="HOw-h1-Ehh" firstAttribute="trailing" secondItem="YZA-he-o5F" secondAttribute="trailing" id="jt1-SE-IjN"/>
                             <constraint firstItem="HOw-h1-Ehh" firstAttribute="trailing" secondItem="YZA-he-o5F" secondAttribute="trailing" id="r6v-ob-Lvh"/>
+                            <constraint firstItem="HOw-h1-Ehh" firstAttribute="trailing" secondItem="YZA-he-o5F" secondAttribute="trailing" id="uvR-Id-btK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YZA-he-o5F"/>
                     </view>
