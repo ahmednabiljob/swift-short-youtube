@@ -8,6 +8,7 @@
 
 import UIKit
 import Kingfisher
+import Firebase
 
 class SearchViewController: UIViewController {
     
@@ -22,6 +23,14 @@ class SearchViewController: UIViewController {
     
     
     @IBAction func signOutButtonClicked(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true){
+            let firebaseAuth = Auth.auth()
+            do {
+                try firebaseAuth.signOut()
+            } catch let signOutError as NSError {
+                print ("Error signing out: %@", signOutError)
+            }
+        }
     }
     
     
@@ -48,11 +57,17 @@ class SearchViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        if segue.identifier == "VideoPlayerSegue"{
+        
+        if segue.identifier == "Video"{
+            //print("preparing..")
+            
             if let videoController = segue.destination as? VideoViewController{
                 print("preparing for segue .... ")
                 videoController.videoID = selectedVideoID
                 videoController.videoTitle = selectedVideoTitle
+            }
+            else{
+                print("Something not right")
             }
         }
     }
@@ -81,8 +96,12 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedVideoID = self.videoArray[indexPath.row].videoUrlString
         selectedVideoTitle = self.videoArray[indexPath.row].videoTitle
-        print("seque starting .. ")
-        performSegue(withIdentifier: "VideoPlayerSegue", sender: self)
+        //print("seque starting .. ")
+        /*let storyBoard = UIStoryboard(name: "Main", bundle: nil )
+        let videoController = storyBoard.instantiateViewController(withIdentifier: "Video") as! VideoViewController
+        videoController.videoID = selectedVideoID
+        videoController.videoTitle = selectedVideoTitle*/
+        performSegue(withIdentifier: "Video", sender: self)
     }
     
 }

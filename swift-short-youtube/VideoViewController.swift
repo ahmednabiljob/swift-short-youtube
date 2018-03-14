@@ -17,19 +17,30 @@ class VideoViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        let videoPlayer = YouTubePlayerView(frame: CGRect(x: self.view.frame.minX-10, y: 10, width: self.view.frame.maxX-20, height: 200))
+        let videoPlayer = YouTubePlayerView(frame: CGRect(x: self.view.frame.minX+10, y: 10, width: self.view.frame.maxX-10, height: 200))
         videoPlayer.loadVideoID(videoID)
         
-        let title = UILabel(frame: CGRect(x: self.view.frame.minX-10, y: 220, width: self.view.frame.maxX-20, height: 64))
+        let title = UILabel(frame: CGRect(x: self.view.frame.minX+10, y: 220, width: self.view.frame.maxX-10, height: 64))
         title.text=videoTitle
         
         self.view.addSubview(videoPlayer)
         self.view.addSubview(title)
         
         if videoPlayer.ready{
+            print("player is ready")
             videoPlayer.play()
         }
         
+        let backButton = UIButton(type: .system)
+        backButton.frame = CGRect(x: self.view.frame.minX+10, y: self.view.frame.maxY-70, width: self.view.frame.maxX-20, height: 64)
+        backButton.addTarget(self, action: #selector(backToPreviousView), for: .touchUpInside)
+        backButton.backgroundColor = UIColor.red
+        backButton.setTitle("Back", for: .normal)
+        self.view.addSubview(backButton)
+    }
+    
+    @objc func backToPreviousView(){
+        self.dismiss(animated: true, completion: nil)
     }
 
     override func viewDidLoad() {

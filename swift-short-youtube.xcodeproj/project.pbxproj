@@ -92,13 +92,13 @@
 				E213B1BC2053236100B1B7D7 /* AppDelegate.swift */,
 				E213B1BE2053236100B1B7D7 /* ViewController.swift */,
 				E269D0132057736300B7FA83 /* SearchViewController.swift */,
+				E269D0192058B98800B7FA83 /* VideoViewController.swift */,
 				E213B1C02053236100B1B7D7 /* Main.storyboard */,
 				E269D0152057B17900B7FA83 /* VideoTableViewCell.swift */,
 				E213B1C32053236100B1B7D7 /* Assets.xcassets */,
 				E213B1C52053236100B1B7D7 /* LaunchScreen.storyboard */,
 				E213B1C82053236100B1B7D7 /* Info.plist */,
 				E269D01720582D0C00B7FA83 /* Video.swift */,
-				E269D0192058B98800B7FA83 /* VideoViewController.swift */,
 			);
 			path = "swift-short-youtube";
 			sourceTree = "<group>";
