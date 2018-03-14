@@ -16,6 +16,8 @@
 		E213B2112057121700B1B7D7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E213B2102057121700B1B7D7 /* GoogleService-Info.plist */; };
 		E269D0142057736300B7FA83 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E269D0132057736300B7FA83 /* SearchViewController.swift */; };
 		E269D0162057B17900B7FA83 /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E269D0152057B17900B7FA83 /* VideoTableViewCell.swift */; };
+		E269D01820582D0C00B7FA83 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = E269D01720582D0C00B7FA83 /* Video.swift */; };
+		E269D01A2058B98800B7FA83 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E269D0192058B98800B7FA83 /* VideoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		E213B2102057121700B1B7D7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		E269D0132057736300B7FA83 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		E269D0152057B17900B7FA83 /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
+		E269D01720582D0C00B7FA83 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		E269D0192058B98800B7FA83 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,8 @@
 				E213B1C32053236100B1B7D7 /* Assets.xcassets */,
 				E213B1C52053236100B1B7D7 /* LaunchScreen.storyboard */,
 				E213B1C82053236100B1B7D7 /* Info.plist */,
+				E269D01720582D0C00B7FA83 /* Video.swift */,
+				E269D0192058B98800B7FA83 /* VideoViewController.swift */,
 			);
 			path = "swift-short-youtube";
 			sourceTree = "<group>";
@@ -180,6 +186,9 @@
 				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/YouTubePlayer/YouTubePlayer.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -188,6 +197,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YouTubePlayer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -238,7 +250,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E269D01820582D0C00B7FA83 /* Video.swift in Sources */,
 				E269D0142057736300B7FA83 /* SearchViewController.swift in Sources */,
+				E269D01A2058B98800B7FA83 /* VideoViewController.swift in Sources */,
 				E269D0162057B17900B7FA83 /* VideoTableViewCell.swift in Sources */,
 				E213B1BF2053236100B1B7D7 /* ViewController.swift in Sources */,
 				E213B1BD2053236100B1B7D7 /* AppDelegate.swift in Sources */,

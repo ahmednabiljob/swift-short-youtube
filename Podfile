@@ -7,4 +7,7 @@ target 'swift-short-youtube' do
     pod 'Firebase/Auth'
     pod 'GoogleSignIn'
     pod 'Alamofire', '~> 4.7'
+    pod 'Kingfisher', '~> 4.0'
+    pod 'SwiftyJSON'
+    pod 'YouTubePlayer'
 end
