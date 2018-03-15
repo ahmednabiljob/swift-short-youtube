@@ -10,4 +10,5 @@ target 'swift-short-youtube' do
     pod 'Kingfisher', '~> 4.0'
     pod 'SwiftyJSON'
     pod 'YouTubePlayer'
+    #pod "youtube-ios-player-helper"
 end

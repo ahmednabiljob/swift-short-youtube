@@ -18,6 +18,7 @@
 		E269D0162057B17900B7FA83 /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E269D0152057B17900B7FA83 /* VideoTableViewCell.swift */; };
 		E269D01820582D0C00B7FA83 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = E269D01720582D0C00B7FA83 /* Video.swift */; };
 		E269D01A2058B98800B7FA83 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E269D0192058B98800B7FA83 /* VideoViewController.swift */; };
+		E269D054205A093C00B7FA83 /* CircularTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = E269D053205A093C00B7FA83 /* CircularTransition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		E269D0152057B17900B7FA83 /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
 		E269D01720582D0C00B7FA83 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		E269D0192058B98800B7FA83 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		E269D053205A093C00B7FA83 /* CircularTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularTransition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				E213B1BC2053236100B1B7D7 /* AppDelegate.swift */,
 				E213B1BE2053236100B1B7D7 /* ViewController.swift */,
 				E269D0132057736300B7FA83 /* SearchViewController.swift */,
+				E269D053205A093C00B7FA83 /* CircularTransition.swift */,
 				E269D0192058B98800B7FA83 /* VideoViewController.swift */,
 				E213B1C02053236100B1B7D7 /* Main.storyboard */,
 				E269D0152057B17900B7FA83 /* VideoTableViewCell.swift */,
@@ -138,6 +141,7 @@
 				TargetAttributes = {
 					E213B1B82053236100B1B7D7 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -252,6 +256,7 @@
 			files = (
 				E269D01820582D0C00B7FA83 /* Video.swift in Sources */,
 				E269D0142057736300B7FA83 /* SearchViewController.swift in Sources */,
+				E269D054205A093C00B7FA83 /* CircularTransition.swift in Sources */,
 				E269D01A2058B98800B7FA83 /* VideoViewController.swift in Sources */,
 				E269D0162057B17900B7FA83 /* VideoTableViewCell.swift in Sources */,
 				E213B1BF2053236100B1B7D7 /* ViewController.swift in Sources */,
@@ -393,11 +398,14 @@
 			baseConfigurationReference = 9ADEF5073AF0A5B0F3F3887A /* Pods-swift-short-youtube.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "swift-short-youtube/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github.ahmednabiljob.swift-short-youtube";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -408,11 +416,13 @@
 			baseConfigurationReference = C0837544BE02E7DB9FE71E3B /* Pods-swift-short-youtube.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "swift-short-youtube/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github.ahmednabiljob.swift-short-youtube";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

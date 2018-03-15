@@ -10,9 +10,9 @@ import UIKit
 import Kingfisher
 import Firebase
 
-class SearchViewController: UIViewController {
+class SearchViewController: UIViewController, UIViewControllerTransitioningDelegate {
     
-
+    let transition = CircularTransition()
     var videoArray = [Video]()
     var selectedVideoID:String = ""
     var selectedVideoTitle:String = ""
@@ -49,7 +49,21 @@ class SearchViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionMode = .present
+        transition.startingPoint = self.view.center
+        transition.circleColor = .lightGray
+        
+        return transition
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionMode = .dismiss
+        transition.startingPoint = self.view.center
+        transition.circleColor = .red
+        
+        return transition
+    }
     
     // MARK: - Navigation
 
@@ -65,6 +79,8 @@ class SearchViewController: UIViewController {
                 print("preparing for segue .... ")
                 videoController.videoID = selectedVideoID
                 videoController.videoTitle = selectedVideoTitle
+                videoController.transitioningDelegate=self
+                videoController.modalPresentationStyle = .custom
             }
             else{
                 print("Something not right")
@@ -74,6 +90,7 @@ class SearchViewController: UIViewController {
     
 
 }
+
 
 
 
@@ -102,6 +119,7 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate{
         videoController.videoID = selectedVideoID
         videoController.videoTitle = selectedVideoTitle*/
         performSegue(withIdentifier: "Video", sender: self)
+        
     }
     
 }
@@ -127,6 +145,7 @@ extension SearchViewController: UISearchBarDelegate{
         
     }
 }
+
 
 
 

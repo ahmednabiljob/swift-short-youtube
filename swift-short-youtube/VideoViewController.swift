@@ -11,14 +11,19 @@ import YouTubePlayer
 //import AVKit
 
 
+
 class VideoViewController: UIViewController {
     
+    
+    @IBOutlet weak var playerView: YouTubePlayerView!
     var videoID:String = ""
     var videoTitle:String = ""
     
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        
         
         let videoPlayer = YouTubePlayerView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.width*9/16))
         
@@ -33,7 +38,7 @@ class VideoViewController: UIViewController {
         }
         videoPlayer.play()
         self.view.addSubview(videoPlayer)
-        
+ 
         
         
         // Create an AVPlayer, passing it the HTTP Live Streaming URL.
@@ -78,9 +83,9 @@ class VideoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-        print(videoID)
-        print(videoTitle)
+        playerView.delegate = self
+        //print(videoID)
+        //print(videoTitle)
     }
 
     override func didReceiveMemoryWarning() {
@@ -99,6 +104,23 @@ class VideoViewController: UIViewController {
     }
     */
 
+}
+
+extension VideoViewController:YouTubePlayerDelegate{
+    /*func playerReady(_ videoPlayer: YouTubePlayerView) {
+        //print("Hola hola hola  ----------- \(playerView.playerVars)")
+        //playerView.play()
+    }*/
+    func playerStateChanged(_ videoPlayer: YouTubePlayerView, playerState: YouTubePlayerState) {
+        print("Hola hola hola  ----------- \(videoPlayer.playerVars)")
+        if playerState==YouTubePlayerState.Unstarted{
+            videoPlayer.play()
+        }
+        else if playerState == YouTubePlayerState.Playing{
+            print("playing the video")
+        }
+    }
+    //func playerQualityChanged(_ videoPlayer: YouTubePlayerView, playbackQuality: YouTubePlaybackQuality) {}
 }
 
 

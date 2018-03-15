@@ -32,6 +32,7 @@
                      });
                      function onReady(event) {
                          window.location.href = 'ytplayer://onReady?data=' + event.data;
+                         event.target.playVideo();
                      }
 
         function onStateChange(event) {
