@@ -9,6 +9,7 @@
 import UIKit
 import Kingfisher
 import Firebase
+//import Hero
 
 class SearchViewController: UIViewController, UIViewControllerTransitioningDelegate {
     
@@ -36,14 +37,14 @@ class SearchViewController: UIViewController, UIViewControllerTransitioningDeleg
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         searchTableView.dataSource = self
         searchTableView.delegate = self
         searchBar.delegate = self
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -66,7 +67,7 @@ class SearchViewController: UIViewController, UIViewControllerTransitioningDeleg
     }
     
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
@@ -81,6 +82,7 @@ class SearchViewController: UIViewController, UIViewControllerTransitioningDeleg
                 videoController.videoTitle = selectedVideoTitle
                 videoController.transitioningDelegate=self
                 videoController.modalPresentationStyle = .custom
+                
             }
             else{
                 print("Something not right")
@@ -88,7 +90,7 @@ class SearchViewController: UIViewController, UIViewControllerTransitioningDeleg
         }
     }
     
-
+    
 }
 
 
@@ -115,9 +117,9 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate{
         selectedVideoTitle = self.videoArray[indexPath.row].videoTitle
         //print("seque starting .. ")
         /*let storyBoard = UIStoryboard(name: "Main", bundle: nil )
-        let videoController = storyBoard.instantiateViewController(withIdentifier: "Video") as! VideoViewController
-        videoController.videoID = selectedVideoID
-        videoController.videoTitle = selectedVideoTitle*/
+         let videoController = storyBoard.instantiateViewController(withIdentifier: "Video") as! VideoViewController
+         videoController.videoID = selectedVideoID
+         videoController.videoTitle = selectedVideoTitle*/
         performSegue(withIdentifier: "Video", sender: self)
         
     }
@@ -126,8 +128,8 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate{
 
 extension SearchViewController: UISearchBarDelegate{
     /*func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print(searchText)
-    }*/
+     print(searchText)
+     }*/
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         if let text = searchBar.text{
@@ -141,7 +143,7 @@ extension SearchViewController: UISearchBarDelegate{
                 
             }
         }
-
+        
         
     }
 }
